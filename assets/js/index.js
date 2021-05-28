@@ -1,6 +1,5 @@
 window.onload = function () {
     var newSlideSize = function slideSize() {
-        console.log($(window).height())
         $(".swiper-container,.swiper-wrapper,.swiper-slide").height($(window).height());
     };
     newSlideSize();
