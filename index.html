@@ -123,6 +123,54 @@
 			width: 100% !important;
 			height: auto !important;
 		}
+
+		.swiper-item {
+			height: 100%;
+			width: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+			overflow: hidden;
+
+			position: relative;
+			text-align: center;
+		}
+
+		.swiper-item .swiper-body {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-weight: bolder;
+			color: #ffffff;
+			min-width: 60%;
+			line-height: 1.4;
+		}
+
+		.swiper-item .swiper-body .swiper-title {
+			font-size: 32px;
+			margin-bottom: 80px;
+		}
+
+		.swiper-item .swiper-body .swiper-description {
+			font-size: 18px;
+			line-height: 1.6;
+
+		}
+
+		@media screen and (max-width: 768px) {
+			.swiper-item .swiper-body {
+				top: 50%;
+			}
+
+			.swiper-item .swiper-body .swiper-title {
+				font-size: 24px;
+				margin-bottom: 40px;
+			}
+
+			.swiper-item .swiper-body .swiper-description {
+				font-size: 16px;
+			}
+		}
 	</style>
 	<link rel="stylesheet" href="assets/css/7b1e8.css" media="all" />
 	<link rel='stylesheet' id='google-fonts-1-css'
@@ -132,64 +180,7 @@
 
 	<script src="assets/js/d0cd8.js"></script>
 
-
-
-
-
-	<script type="text/javascript">
-		function setREVStartSize(e) {
-			//window.requestAnimationFrame(function() {				 
-			window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
-			window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
-			try {
-				var pw = document.getElementById(e.c).parentNode.offsetWidth,
-					newh;
-				pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
-				e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
-				e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
-				e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
-				e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
-				e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
-				e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
-				e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
-				if (e.layout === "fullscreen" || e.l === "fullscreen")
-					newh = Math.max(e.mh, window.RSIH);
-				else {
-					e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
-					for (var i in e.rl)
-						if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
-					e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
-					e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
-					for (var i in e.rl)
-						if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
-
-					var nl = new Array(e.rl.length),
-						ix = 0,
-						sl;
-					e.tabw = e.tabhide >= pw ? 0 : e.tabw;
-					e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
-					e.tabh = e.tabhide >= pw ? 0 : e.tabh;
-					e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
-					for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
-					sl = nl[0];
-					for (var i in nl)
-						if (sl > nl[i] && nl[i] > 0) {
-							sl = nl[i];
-							ix = i;
-						}
-					var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) < br > (e.gw[ix]);
-					newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
-				}
-				if (window.rs_init_css === undefined) window.rs_init_css = document.head.appendChild(document.createElement(
-					"style"));
-				document.getElementById(e.c).height = newh + "px";
-				window.rs_init_css.innerHTML += "#" + e.c + "_wrapper { height: " + newh + "px }";
-			} catch (e) {
-				console.log("Failure at Presize of Slider:" + e)
-			}
-			//});
-		};
-	</script>
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body
@@ -374,7 +365,7 @@
 								<div class="elementor-inner">
 									<div class="elementor-section-wrap">
 										<!-- Home -->
-										<section
+										<!-- <section
 											class="elementor-section elementor-top-section elementor-element elementor-element-7a683a7 elementor-section-full_width elementor-section-height-default elementor-section-height-default qodef-elementor-content-no"
 											data-id="7a683a7" data-element_type="section">
 											<div class="elementor-container elementor-column-gap-default">
@@ -444,7 +435,7 @@
 																							data-frame_0="sX:0.9;sY:0.9;"
 																							data-frame_1="e:power2.inOut;st:1100;sp:1000;"
 																							data-frame_999="o:0;st:w;sR:1400;"
-																							style="z-index:10;font-family:Cormorant;font-style:italic;">
+																							style="z-index:10;font-style:italic;">
 
 																						</rs-layer>
 																						<rs-layer
@@ -787,6 +778,73 @@
 														</div>
 													</div>
 												</div>
+											</div>
+										</section> -->
+										<section>
+											<div class="swiper-container">
+												<div class="swiper-wrapper" id="swiper-wrapper">
+													<div class="swiper-slide">
+														<div class="swiper-item"
+															style="background-image: url(assets/img/h11-rev-background-img.png);">
+															<div class="swiper-body">
+																<div class="swiper-title">商务部回应中美第一阶段经贸协议：双方应共同努力推动协议落实
+																</div>
+																<div class="swiper-description">
+																	在今天（27日）商务部举行的例行新闻发布会上，有媒体问：美国农业部数据显示，5月7日以来中国正加快自美玉米采购，这是否意味着中方仍在而且将继续积极履行第一阶段经贸协议？对此，新闻发言人高峰表示，中美第一阶段经贸协议有利于中国，有利于美国，有利于整个世界。双方应共同努力，创造氛围和条件，推动协议落实。
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-item"
+															style="background-image: url(assets/img/h11-rev-background-img.png);">
+															<div class="swiper-body">
+																<div class="swiper-title">商务部回应中美第一阶段经贸协议：双方应共同努力推动协议落实
+																</div>
+																<div class="swiper-description">
+																	在今天（27日）商务部举行的例行新闻发布会上，有媒体问：美国农业部数据显示，5月7日以来中国正加快自美玉米采购，这是否意味着中方仍在而且将继续积极履行第一阶段经贸协议？对此，新闻发言人高峰表示，中美第一阶段经贸协议有利于中国，有利于美国，有利于整个世界。双方应共同努力，创造氛围和条件，推动协议落实。
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-item"
+															style="background-image: url(assets/img/h11-rev-background-img.png);">
+															<div class="swiper-body">
+																<div class="swiper-title">商务部回应中美第一阶段经贸协议：双方应共同努力推动协议落实
+																</div>
+																<div class="swiper-description">
+																	在今天（27日）商务部举行的例行新闻发布会上，有媒体问：美国农业部数据显示，5月7日以来中国正加快自美玉米采购，这是否意味着中方仍在而且将继续积极履行第一阶段经贸协议？对此，新闻发言人高峰表示，中美第一阶段经贸协议有利于中国，有利于美国，有利于整个世界。双方应共同努力，创造氛围和条件，推动协议落实。
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-item"
+															style="background-image: url(assets/img/h11-rev-background-img.png);">
+															<div class="swiper-body">
+																<div class="swiper-title">商务部回应中美第一阶段经贸协议：双方应共同努力推动协议落实
+																</div>
+																<div class="swiper-description">
+																	在今天（27日）商务部举行的例行新闻发布会上，有媒体问：美国农业部数据显示，5月7日以来中国正加快自美玉米采购，这是否意味着中方仍在而且将继续积极履行第一阶段经贸协议？对此，新闻发言人高峰表示，中美第一阶段经贸协议有利于中国，有利于美国，有利于整个世界。双方应共同努力，创造氛围和条件，推动协议落实。
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="swiper-slide">
+														<div class="swiper-item"
+															style="background-image: url(assets/img/h11-rev-background-img.png);">
+															<div class="swiper-body">
+																<div class="swiper-title">商务部回应中美第一阶段经贸协议：双方应共同努力推动协议落实
+																</div>
+																<div class="swiper-description">
+																	在今天（27日）商务部举行的例行新闻发布会上，有媒体问：美国农业部数据显示，5月7日以来中国正加快自美玉米采购，这是否意味着中方仍在而且将继续积极履行第一阶段经贸协议？对此，新闻发言人高峰表示，中美第一阶段经贸协议有利于中国，有利于美国，有利于整个世界。双方应共同努力，创造氛围和条件，推动协议落实。
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="pagination"></div>
 											</div>
 										</section>
 										<!-- About us -->
@@ -1504,25 +1562,25 @@
 																		<div
 																			class="elementor-text-editor elementor-clearfix">
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bolder;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bolder;">
 																				&#8211;
 																				Establishment of WOFE
 																				and JV
 																			</p>
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bolder;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bolder;">
 																				&#8211;
 																				Market Research</p>
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bolder;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bolder;">
 																				&#8211;
 																				Competitor Analysis</p>
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bolder;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bolder;">
 																				&#8211; Recruitment and HR
 																				Management</p>
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bolder;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bolder;">
 																				&#8211; Sales and Operation
 																				Consulting</p>
 																		</div>
@@ -1607,19 +1665,19 @@
 																		<div
 																			class="elementor-text-editor elementor-clearfix">
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bold;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bold;">
 																				&#8211; Integrity Is Foremost to us
 
 																			</p>
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bold;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bold;">
 																				&#8211; Highly Professional
 																			</p>
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bold;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bold;">
 																				&#8211; Quality and Result Driven</p>
 																			<p
-																				style="color: #ffffff; font-size: 18px; font-family: Cormorant; line-height: 27px; font-weight: bold;">
+																				style="color: #ffffff; font-size: 18px; line-height: 27px; font-weight: bold;">
 																				&#8211; Global Network</p>
 																		</div>
 																	</div>
@@ -1826,6 +1884,9 @@
 	<script src="assets/js/ed083.js"></script>
 	<script src="assets/js/f7ddb.js"></script>
 	<script src="assets/js/17f30.js"></script>
+	<script src="assets/js/jquery-1.10.1.min.js"></script>
+	<script src="assets/js/swiper-2.1.min.js"></script>
+	<script src="assets/js/index.js"></script>
 
 </body>
 
