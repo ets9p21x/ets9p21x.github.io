@@ -1,6 +1,6 @@
 html,
 body {
-    font-family: "MessinaSansWeb",Helvetica,sans-serif;
+    font-family: "MessinaSansWeb", Helvetica, sans-serif;
 }
 
 a {
@@ -20,7 +20,7 @@ li {
 }
 
 .cl {
-    * zoom: 1;
+    *zoom: 1;
 }
 
 /*---- banner ---*/
@@ -86,7 +86,7 @@ li {
 @font-face {
     font-family: 'MessinaSansWeb';
     src: url(../fonts/MessinaSansWeb-Light.eot);
-    src: url(../fonts/MessinaSansWeb-Light.eot?#iefix) format("embedded-opentype") , url(../fonts/MessinaSansWeb-Light.woff2) format("woff2") , url(../fonts/MessinaSansWeb-Light.woff) format("woff");
+    src: url(../fonts/MessinaSansWeb-Light.eot?#iefix) format("embedded-opentype"), url(../fonts/MessinaSansWeb-Light.woff2) format("woff2"), url(../fonts/MessinaSansWeb-Light.woff) format("woff");
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
@@ -97,7 +97,7 @@ li {
 @font-face {
     font-family: 'MessinaSansWeb';
     src: url(../fonts/MessinaSansWeb-Regular.eot);
-    src: url(../fonts/MessinaSansWeb-Regular.eot?#iefix) format("embedded-opentype") , url(../fonts/MessinaSansWeb-Regular.woff2) format("woff2") , url(../fonts/MessinaSansWeb-Regular.woff) format("woff");
+    src: url(../fonts/MessinaSansWeb-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/MessinaSansWeb-Regular.woff2) format("woff2"), url(../fonts/MessinaSansWeb-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -108,7 +108,7 @@ li {
 @font-face {
     font-family: 'MessinaSansWeb';
     src: url(../fonts/MessinaSansWeb-Bold.eot);
-    src: url(../fonts/MessinaSansWeb-Bold.eot?#iefix) format("embedded-opentype") , url(../fonts/MessinaSansWeb-Bold.woff2) format("woff2") , url(../fonts/MessinaSansWeb-Bold.woff) format("woff");
+    src: url(../fonts/MessinaSansWeb-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/MessinaSansWeb-Bold.woff2) format("woff2"), url(../fonts/MessinaSansWeb-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
